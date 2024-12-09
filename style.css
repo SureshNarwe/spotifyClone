@@ -1,0 +1,722 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(21, 21, 21, 0.936);
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+.navbar .logo {
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .logo a img {
+  width: 42px;
+  height: 42px;
+}
+
+.navbar-medium {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 30px;
+  gap: 30px;
+}
+
+.homeIcon {
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  background-color: rgba(67, 64, 64, 0.689);
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeIcon img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.homeIcon:hover {
+  background-color: rgba(84, 81, 81, 0.758);
+}
+
+.search {
+  width: 30vw;
+  background-color: rgba(67, 64, 64, 0.689);
+  padding: 4px 7px;
+  display: flex;
+  align-items: center;
+  border-radius: 28px;
+  padding-right: 20px;
+  transition: all 0.3s;
+}
+
+.search:hover {
+  background-color: rgba(181, 177, 177, 0.349);
+}
+
+.search .searchIcon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.searchLeft {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17pxs;
+}
+.searchRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+}
+.search .searchIcon a img {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.search .searchIcon .searchLeft input {
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.search .line {
+  height: 22px;
+  width: 2px;
+  background-color: rgb(153, 146, 146);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-right .navbtn1 {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.navbtn1:hover {
+  color: rgb(112, 116, 119);
+}
+
+.navbar-right .navbtn2 {
+  height: 50px;
+  width: 10vw;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  color: rgb(63, 60, 60);
+  transition: all 0.3s;
+}
+.navbtn2:hover {
+  background-color: rgba(176, 167, 167, 0.877);
+}
+
+/* // .........hero css start from here..........// */
+
+.main {
+  width: 100%;
+  height: calc(89.5vh - 60px);
+  background-color: black;
+  display: flex;
+}
+
+.leftSide {
+  width: 28%;
+  height: 100%;
+}
+
+.leftSide-details {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 27, 27, 0.929);
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.library-info {
+  width: 100%;
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(34, 36, 36, 0.461);
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.library-info .labIcon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.labIcon h3 {
+  font-size: 19px;
+  color: white;
+}
+.labIcon img {
+  height: 27px;
+  width: 27px;
+}
+
+.library-info .plus {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.library-info .plus:hover {
+  background-color: rgba(64, 63, 63, 0.731);
+}
+.leftplaylist {
+  width: 100%;
+  max-height: 330px;
+  background-color: rgba(41, 40, 40, 0.619);
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.leftplaylist::-webkit-scrollbar {
+  background-color: transparent;
+}
+.leftplaylist::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  width: 6px;
+}
+.leftplaylist:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 141, 143, 0.612);
+}
+
+.leftplaylist .list {
+  width: 100%;
+  background-color: rgba(82, 79, 79, 0.338);
+  padding: 20px 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leftplaylist .list h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+.leftplaylist .list p {
+  font-size: 17px;
+  color: white;
+}
+
+.leftplaylist .list button {
+  width: 40%;
+  padding: 6px 0px;
+  border-radius: 30px;
+  margin-top: 4px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(14, 13, 13, 0.806);
+}
+.links {
+  width: 100%;
+  padding-top: 20px;
+}
+.links a {
+  color: rgba(200, 192, 192, 0.838);
+  text-decoration: none;
+  padding: 15px 13px;
+  line-height: 2;
+}
+
+#btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 30px;
+  padding: 20px 8px;
+  background-color: rgba(107, 109, 110, 0.443);
+  border-radius: 30px;
+  margin: 30px 10px;
+}
+
+#btn3:hover {
+  background-color: rgba(103, 107, 109, 0.669);
+}
+.btn3 {
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* .................right main css start form here.......................... */
+
+.rightSide {
+  width: 72%;
+  height: 100%;
+  background-color: rgba(25, 27, 27, 0.929);
+}
+
+.rightImg {
+  width: 100%;
+  max-height: 100%;
+  border-radius: 7px;
+  background-color: rgba(19, 19, 19, 0.384);
+  overflow: hidden;
+  overflow-y: auto;
+}
+.right-details {
+  margin-top: 10px;
+  width: 100%;
+  height:100%;
+  border-radius: 7px;
+  background-color: rgba(35, 37, 37, 0.441);
+}
+
+.ListAlbum {
+  width: 100%;
+  margin-bottom: 30px;
+  /* border: 5px solid red; */
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+  color: white;
+}
+.heading h1 {
+  padding-top: 10px;
+  font-size: 27px;
+  font-weight: 600;
+}
+.heading p {
+  font-size: 17px;
+}
+.heading p:hover,
+.heading h1:hover {
+  text-decoration: underline;
+}
+
+.rightPlaylist {
+  width: 100%;
+  gap: 13px;
+  flex-wrap: wrap;
+  display: flex;
+  /* background-color: blue; */
+  padding: 4px 15px;
+  margin-bottom: 20px;
+}
+.Audiolist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 160px;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 15px;
+  cursor: pointer;
+  /* background-color: red; */
+}
+.Audiolist:hover {
+  background-color: rgba(41, 41, 45, 0.779);
+}
+
+.Audiolist .IMG .Artist {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Audiolist .IMG .songAlbum {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  object-fit: contain;
+  border-radius:10px;
+}
+.Audiolist h4 {
+  color: rgba(249, 245, 245, 0.963);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  padding-left: 10px;
+}
+.Audiolist p {
+  padding: 1px 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.IMG #playbtn {
+  position: absolute;
+  bottom: 54px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(30, 190, 91);
+  display: none;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+
+.Audiolist:hover .IMG #playbtn {
+  display: block;
+}
+
+
+
+/* right footer css start from here */
+
+.mainfooter{
+    width: 100%;
+    height: inherit;
+    margin-top: 40px;
+}
+
+.mainfooter .Foooter{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+.company h3{
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.company ul li{
+    list-style: none;
+    font-size: 17px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.358);
+    cursor: pointer;
+}
+.company ul{
+    margin-bottom: 40px;
+}
+
+.company ul li:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.socialMedia{
+    display: flex;
+    gap: 9px;
+}
+
+.socialMedia .MediaIcon {
+    display: flex;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+    object-fit: cover;
+    background-color: rgba(91, 89, 89, 0.438);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.MediaIcon:hover{
+    background-color: rgb(91, 96, 100);
+}
+
+hr{
+    width: 100%;
+    height:2px;
+    background-color:white;
+
+}
+
+.copyright p{
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+
+/* .........................footer  css start form here.............................. */
+.footcutter{
+  display: none;
+}
+
+.mainFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  padding: 0px 20px;
+  background: linear-gradient(
+    to right,
+    rgba(208, 57, 211, 0.826),
+    rgba(66, 85, 162, 0.772),
+    rgba(61, 143, 210, 0.954)
+  );
+  position: fixed;
+  bottom: 0;
+  margin: 5px 7px;
+}
+
+.para p {
+  font-size: 17px;
+  color: rgb(215, 220, 224);
+}
+.para h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(215, 220, 224);
+}
+
+.mainFooter .btn4 {
+  padding: 15px 30px;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.mainFooter .btn4:hover {
+  background-color: rgba(173, 175, 177, 0.705);
+}
+
+
+  /* ''''''''''''''''''songs control panner start from here .......... */
+
+.audio-player{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgba(208, 57, 211, 0.826),
+    rgba(66, 85, 162, 0.772),
+    rgba(61, 143, 210, 0.954)
+  );
+}
+
+.audio-player .photo{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.audio-player .photo img{
+width: 70px;
+height: 70px;
+border-radius:10px;
+}
+
+.audio-player .photo .song-info h3{
+  font-size: 18px;
+  color: rgba(247, 236, 236, 0.929);
+  font-weight: 600;
+}
+.audio-player .photo .song-info p{
+  font-size: 14px;
+  color: rgba(248, 236, 236, 0.726);
+  font-weight: 600;
+}
+
+.controls{
+  display: flex;
+  /* flex-direction: column; */
+   /* justify-content: center; */
+   align-items: center;
+   gap: 0px;
+}
+.controls .duration{
+  display: flex;
+  align-items: ceter;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  color: rgb(224, 217, 217);
+}
+.controls .duration input{
+  width: 24vw;
+  cursor: pointer;
+}
+.control-buttons{
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0px 20px;
+  padding-bottom: 0px;
+  cursor: pointer;
+}
+
+.control-buttons img{
+  width: 40px;
+  height: 40px;
+  padding:  10px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color:rgba(62, 163, 29, 0.836);
+  box-shadow:  2px 4px 5px rgb(60, 28, 75), 2px 4px 5px rgb(75, 71, 71) ,inset -2px -4px 5px rgb(59, 55, 55);
+}
+.controlbtn img:hover{
+  background-color: green;
+  cursor: pointer;
+}
+
+.volume{
+  display: flex;
+  gap: 5px;
+}
+
+.volume img{
+  width: 42px;
+  height: 42px;
+  padding: 7px;
+  background-color: rgba(65, 63, 63, 0.468);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.volume img:hover{
+  background-color: rgba(98, 95, 95, 0.694);
+  cursor: pointer;
+}
+
+.volume input{
+  width: 10vw;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:700px) {
+
+   
+  .leftSide {
+    width: 50%;
+  }
+  .rightSide {
+    width: auto;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 5px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+   
+  .Audiolist .IMG .songAlbum {
+    width: 180px;
+    height: 150px;
+    object-fit: contain;
+  
+  }
+
+  .mainfooter .Foooter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+  .right-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainFooter{
+    width: auto;
+  }
+}
+
